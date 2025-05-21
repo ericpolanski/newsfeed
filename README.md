@@ -1,3 +1,5 @@
+# [Design Documentation](documentation/design_doc.md)
+
 # Newsfeed Application
 
 A responsive newsfeed application built with Next.js frontend and Django GraphQL backend (using Ariadne). Includes user authentication to control post creation, editing and deletion.
@@ -164,6 +166,8 @@ This newsfeed application allows users to:
   - Mutations: For posts, comments, likes, and authentication
 
 ## Authentication System
+
+I decided to add an authentication system since in my CS308: Foundations of Security course, we're talking about this very thing and I thought why not combine the work the two classes are doing.
 
 This application includes a full authentication system built with JWT tokens and GraphQL. Here are the key features:
 

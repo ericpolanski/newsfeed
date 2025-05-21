@@ -2,7 +2,7 @@
 
 ## Overview/Background
 
-This project implements a newsfeed application that allows users to view, create, edit, and delete posts. It utilizes a modern tech stack with a Next.js frontend and Django GraphQL backend. The application includes social features such as likes and comments, as well as a comprehensive authentication system.
+This project implements a newsfeed application that allows users to view, create, edit, and delete posts. The application includes social features such as likes and comments, as well as a comprehensive authentication system.
 
 ## Technical Problem Statement
 
@@ -10,16 +10,13 @@ The project needs to solve several key problems:
 
 1. **Efficient Data Fetching**: How to fetch and display posts with minimal loading time and network overhead
 2. **Data Mutations**: How to create, update, and delete posts with proper validation and error handling
-3. **Responsive UI**: How to create an interface that works well on devices of all sizes
-4. **State Management**: How to manage application state and ensure UI updates when data changes
-5. **User Authentication**: How to securely manage user authentication and authorization
-6. **Social Interactions**: How to implement like and comment functionality with real-time updates
+3. **State Management**: How to manage application state and ensure UI updates when data changes
+4. **User Authentication**: How to securely manage user authentication and authorization
+5. **Social Interactions**: How to implement like and comment functionality with real-time updates
 
 ## Design Approach
 
 ### Frontend Architecture
-
-The frontend uses a component-based architecture with Next.js and Apollo Client:
 
 1. **Component Structure**:
    
@@ -65,8 +62,6 @@ The frontend uses a component-based architecture with Next.js and Apollo Client:
 
 ### Backend Architecture
 
-The backend uses Django with Ariadne for GraphQL implementation:
-
 1. **Database Schema**:
    - `Post` model with fields: id, title, content, author, created_at, updated_at
    - `Comment` model with fields: post, author, content, created_at, updated_at
@@ -89,6 +84,8 @@ The backend uses Django with Ariadne for GraphQL implementation:
 
 ## Authentication System
 
+I decided to add an authentication system since in my CS308: Foundations of Security course, we're talking about this very thing and I thought why not combine the work the two classes are doing.
+
 The application features a complete authentication system with the following components:
 
 1. **User Management**:
@@ -107,7 +104,7 @@ The application features a complete authentication system with the following com
    - Conditional UI based on authentication state
    - Token persistence across page reloads
 
-For detailed testing procedures of the authentication system, see the [Authentication Testing Instructions](authentication-test-instructions.md) file.
+For detailed on the authentication system, see the [Authentication Implementation Summary](documents/authentication-implementation-summary.md)
 
 ## Social Features
 
@@ -165,12 +162,8 @@ The script handles both servers and properly manages shutdown when Ctrl+C is pre
 **Problem**: As the application grew, the flat component structure became hard to navigate and maintain.
 **Solution**: Refactored the component structure to use domain-based organization, grouping components by their function (auth, posts, layout, common).
 
-## Future Considerations
+### And many, many more...
+But I won't bore you with them :)
 
-1. **Real-time Updates**: Add WebSocket or subscription support for live updates
-2. **Enhanced Social Features**: Implement user profiles, follows, and activity feeds
-3. **Performance Optimization**: Implement pagination or infinite scrolling for large datasets
-4. **Media Support**: Add image and video upload capabilities for posts
-5. **Advanced Search**: Implement full-text search functionality
-6. **Component Library**: Extract common UI patterns into a shared component library
-7. **Automated Testing**: Add comprehensive unit and integration tests for frontend components
+## AI Utilization
+For this project, I largely used Claude 3.7 Sonnet in Agent Mode since I've never used it before and wanted to give it a spin. It was first used to help setup the app, then it created the frontend design, with guidance on my end to make sure everything looked like how I wanted it to be. It was very good at following the prompts I provided it. The only issues with it were that it took a while to think and edit the code, and there were some implementations it made that would break the application. The back-end and authentication only had AI use when I was stuck.
