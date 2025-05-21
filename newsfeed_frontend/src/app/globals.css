@@ -3,24 +3,48 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --card-background: #ffffff;
+  --card-border: #ddd;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --primary: #4267B2;
+  --primary-hover: #365899;
+  --secondary: #f0f2f5;
+  --secondary-text: #444;
+  --muted-text: #666;
+  --success: #4285F4;
+  --danger: #DB4437;
+  --border: #eee;
+  --input-bg: #fff;
+  --input-border: #ccc;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  --background: #121212;
+  --foreground: #e0e0e0;
+  --card-background: #1e1e1e;
+  --card-border: #333;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --primary: #4267B2;
+  --primary-hover: #5b7bd5;
+  --secondary: #2a2a2a;
+  --secondary-text: #c0c0c0;
+  --muted-text: #a0a0a0;
+  --success: #4285F4;
+  --danger: #DB4437;
+  --border: #333;
+  --input-bg: #333;
+  --input-border: #444;
+}
+
+button, 
+input, 
+textarea {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }

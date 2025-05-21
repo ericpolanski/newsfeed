@@ -1,4 +1,3 @@
-\
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/0fJ2wJF2)
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=19495659)
 
@@ -93,6 +92,37 @@ The Django server will run at http://localhost:8000 with the GraphQL endpoint at
    ```
 
 The Next.js server will run at http://localhost:3000
+
+## Generating Test Data
+
+To quickly populate the application with fake data for testing purposes, the project includes a custom management command:
+
+```bash
+# Navigate to the backend directory
+cd newsfeed_backend
+
+# Run the seed data command
+poetry run python manage.py seed_data
+```
+
+This command will:
+1. Create test user accounts (if they don't exist)
+2. Generate random posts with varying content
+3. Add comments to the posts
+4. Add likes to posts
+
+The generated data includes:
+- Multiple test users with predictable passwords
+- A variety of posts with different lengths and content
+- Comments on posts from different users
+- Random like distribution on posts
+
+This is particularly useful for:
+- Testing the UI with a realistic amount of content
+- Demonstrating social features like comments and likes
+- Evaluating how the application handles different user permissions
+
+You can run this command multiple times to add more data if needed.
 
 ## Project Documentation
 

@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import PostList from './components/PostList';
-import CreatePostForm from './components/CreatePostForm';
+import PostList from './components/posts/PostList';
+import CreatePostForm from './components/posts/CreatePostForm';
 
 export default function Home() {
   return (

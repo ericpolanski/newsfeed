@@ -13,7 +13,7 @@ trap cleanup INT
 # Start Django server
 echo "Starting Django server..."
 cd newsfeed_backend
-python manage.py runserver &
+poetry run python manage.py runserver &
 DJANGO_PID=$!
 cd ..
 
