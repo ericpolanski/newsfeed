@@ -1,6 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/0fJ2wJF2)
-[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=19495659)
-
 # Newsfeed Application
 
 A responsive newsfeed application built with Next.js frontend and Django GraphQL backend (using Ariadne). Includes user authentication to control post creation, editing and deletion.
@@ -126,7 +123,7 @@ You can run this command multiple times to add more data if needed.
 
 ## Project Documentation
 
-For detailed information about the project design, architecture, and implementation details, see the [Design Documentation](design_doc.md).
+For detailed information about the project design, architecture, and implementation details, see the [Design Documentation](documentation/design_doc.md).
 
 ### Technical Overview
 
@@ -176,7 +173,7 @@ This application includes a full authentication system built with JWT tokens and
 - Authorization checks for create/edit/delete operations
 - User-specific views (only showing edit/delete buttons on user's own posts)
 
-For detailed testing instructions, see the [Authentication Testing Instructions](authentication-test-instructions.md) file. This includes step-by-step procedures to test the authentication system functionality.
+For further information, see the [Authentication Implementation Summary](documentation/authentication-implementation-summary.md) file.
 
 ## Social Features
 
